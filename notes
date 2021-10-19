@@ -1,0 +1,22 @@
+To detatch from the container without stopping it press CTRL+P followed by CTRL+Q.
+
+
+How do I SSH into a running container
+There is a docker exec command that can be used to connect to a container that is already running.
+
+Use docker ps to get the name of the existing container
+Use the command docker exec -it <container name> /bin/bash to get a bash shell in the container
+Generically, use docker exec -it <container name> <command> to execute whatever command you specify in the container.
+
+
+https://phase2.github.io/devtools/common-tasks/ssh-into-a-container/
+
+dts exercises test --duckiebot_name ![ROBOT_NAME] --local
+
+dts start_gui_tools drz
+
+dts duckiebot keyboard_control drz
+
+rostopic echo /drz/joy_mapper_node/car_cmd
+
+
