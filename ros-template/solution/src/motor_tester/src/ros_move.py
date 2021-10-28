@@ -7,7 +7,7 @@ import time
 import rospy
 import numpy as np
 
-from duckietown_msgs.msg import Twist2DStamped, EpisodeStart
+from duckietown_msgs.msg import Twist2DStamped
 #from sensor_msgs.msg import CompressedImage
 from std_msgs.msg import String
 

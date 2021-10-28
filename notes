@@ -8,6 +8,10 @@ Use docker ps to get the name of the existing container
 Use the command docker exec -it <container name> /bin/bash to get a bash shell in the container
 Generically, use docker exec -it <container name> <command> to execute whatever command you specify in the container.
 
+docker container ls -a
+
+docker -H drz.local run --name zj-duckiebot-interface -v /data:/data --privileged --network=host -dit --restart unless-stopped -e ROBOT_TYPE=duckiebot duckietown/dt-duckiebot-interface:daffy-arm64v8
+
 
 https://phase2.github.io/devtools/common-tasks/ssh-into-a-container/
 
