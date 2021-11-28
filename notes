@@ -23,4 +23,6 @@ dts duckiebot keyboard_control drz
 
 rostopic echo /drz/joy_mapper_node/car_cmd
 
+Donnot install dts. that's a fucking different command. 
+
 
