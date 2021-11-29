@@ -23,4 +23,19 @@ dts duckiebot keyboard_control drz
 
 rostopic echo /drz/joy_mapper_node/car_cmd
 
+[ERROR] [1638161589.473585]: bad callback: <bound method DTSubscriber._monitored_callback of <duckietown.dtros.dtsubscriber.DTSubscriber object at 0x7f8fe7ca30>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/code/catkin_ws/src/dt-ros-commons/packages/duckietown/include/duckietown/dtros/dtsubscriber.py", line 131, in _monitored_callback
+    out = self._user_callback(*args, **kwargs)
+  File "/code/catkin_ws/src/dt-duckiebot-interface/packages/lane_serving/src/serv.py", line 167, in cb_image
+    image = compressed_imgmsg_to_rgb(image_msg)
+  File "/code/catkin_ws/src/dt-ros-commons/packages/duckietown/include/duckietown/utils/image/ros.py", line 171, in compressed_imgmsg_to_rgb
+    im = _compressed_imgmsg_to_np(msg)
+  File "/code/catkin_ws/src/dt-ros-commons/packages/duckietown/include/duckietown/utils/image/ros.py", line 166, in _compressed_imgmsg_to_np
+    assert msg.encoding == "jpeg"
+AttributeError: 'CompressedImage' object has no attribute 'encoding'
+
+
 
